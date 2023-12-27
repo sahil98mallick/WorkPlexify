@@ -1,0 +1,130 @@
+.chart-container {
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.custom-modal-dialog {
+    max-width: 800px;
+}
+
+/* Table */
+.restable {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* table-layout: fixed; */
+}
+
+.restable caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+.restable tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+.restable th,
+.restable td {
+    padding: .625em;
+    text-align: center;
+}
+
+.restable th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    /* text-transform: uppercase; */
+}
+
+@media screen and (max-width: 600px) {
+    .restable {
+        border: 0;
+    }
+
+    .restable caption {
+        font-size: 1.3em;
+    }
+
+    .restable thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 2px;
+    }
+
+    .restable tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    .restable td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: center;
+    }
+
+    .restable td::before {
+        content: attr(data-label);
+        float: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .restable td:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general styling */
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+}
+
+
+
+
+
+
+
+
+
+
+/* general styling */
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
