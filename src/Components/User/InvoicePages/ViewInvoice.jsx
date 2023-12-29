@@ -60,9 +60,14 @@ const ViewInvoice = () => {
         fetchclientsdetails()
     }, [auth?.user?._id])
 
+    // const getClientName = (clientId) => {
+    //     const client = clients.find((client) => client?.client === clientId);
+    //     return client ? client?.name : 'Unknown Client';
+    // };
+    // Fetch the Client Name here
     const getClientName = (clientId) => {
-        const client = clients.find((client) => client?.client === clientId);
-        return client ? client?.name : 'Unknown Client';
+        const client = clients.find((c) => c._id === clientId);
+        return client ? client.name : 'Unknown Client';
     };
 
     const getUserName = (userid) => {
@@ -113,7 +118,7 @@ const ViewInvoice = () => {
                                                                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                                                         >
 
-                                                                            <TableCell align='center'>{getClientName(item?.clientname)}</TableCell>
+                                                                            <TableCell align='center'>{getClientName(item?.client)}</TableCell>
                                                                             <TableCell align='center'>{item?.invoiceDate?.slice(0, 10)}</TableCell>
                                                                             <TableCell align='center'>{item?.totalAmount}</TableCell>
                                                                             <TableCell align='center'>{item?.invoiceStatus}</TableCell>
